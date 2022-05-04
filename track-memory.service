@@ -1,0 +1,13 @@
+[Unit]
+Description= Track Memory Use
+
+[Service]
+Type=simple 
+WorkingDirectory=%h/track-memory
+ExecStart=%h/track-memory/track-memory.sh
+
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=default.target
